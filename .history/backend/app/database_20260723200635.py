@@ -4,6 +4,7 @@ from sqlalchemy.orm import DeclarativeBase
 import os
 from dotenv import load_dotenv
 
+from backend.app.models.app import App
 load_dotenv()
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
@@ -15,9 +16,11 @@ DATABASE_URL = (
     f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 )
 engine = create_engine(DATABASE_URL)
+class Base(DeclarativeBase):
+    pass
 SessionLocal=sessionmaker(bind=engine,
                           autoflush=False,
                           autocommit=False)
-class Base(DeclarativeBase):
-    pass
-
+session=SessionLocal()
+app=App(name="Spotify",price=199)
+session.add(app)
