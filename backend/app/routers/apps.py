@@ -5,54 +5,24 @@ from sqlalchemy import select
 from fastapi import HTTPException,APIRouter,Depends
 from app.dependencies import get_db
 from sqlalchemy.orm import Session
+from app.services import app_service
 router=APIRouter(
     prefix="/apps",
     tags=["Apps"]
 )
 
 @router.post("",response_model=AppResponse)
-def create_app(app:AppCreate,session:Session=Depends(get_db)):
-    db_app=App(name=app.name,price=app.price)
-    session.add(db_app)
-    session.commit()
-    session.refresh(db_app)
-    return db_app
-@router.get("",response_model=list[AppResponse])
-def get_apps(session:Session=Depends(get_db)):
-    apps=session.scalars(select(App)).all()
-    return apps
-@router.get("/{app_id}",response_model=AppResponse)
-def get_apps_id(app_id:int,session:Session=Depends(get_db)):
-    app=session.scalar(select(App).where(App.id==app_id))
-    if app is None:
-        raise HTTPException(
-            status_code=404,
-            detail="App not found"
-            )
-    return app
-@router.put("/{app_id}",response_model=AppResponse)
-def update_app(app_id:int,app:AppCreate,session:Session=Depends(get_db)):
-    db_app=session.scalar(select(App).where(App.id==app_id))
-    if db_app is None:
-        raise HTTPException(
-            status_code=404,
-            detail="No Updation"
-            )
-    db_app.name=app.name
-    db_app.price=app.price
-    session.commit()
-    session.refresh(db_app)
-    return db_app
+def create_app(app:AppCreate,db:Session=Depends(get_db)):
+    return app_service.create_app(db,app)
+@router.get("", response_model=list[AppResponse])
+def get_apps(db: Session = Depends(get_db)):
+    return app_service.get_all_apps(db)
+@router.get("/{app_id}", response_model=AppResponse)
+def get_app(app_id: int, db: Session = Depends(get_db)):
+    return app_service.get_app_by_id(db, app_id)
+@router.put("/{app_id}", response_model=AppResponse)
+def update_app(app_id: int,app: AppCreate,db: Session = Depends(get_db)):
+    return app_service.update_app(db, app_id, app)
 @router.delete("/{app_id}")
-def delete_app(app_id: int,session:Session=Depends(get_db)):
-    db_app=session.scalar(select(App).where(App.id == app_id))
-    if db_app is None:
-        raise HTTPException(
-            status_code=404,
-            detail="App not found"
-        )
-    session.delete(db_app)
-    session.commit()
-    return{
-        "message":"App deleted successfully"
-    }
+def delete_app(app_id: int, db: Session = Depends(get_db)):
+    return app_service.delete_app(db, app_id)
