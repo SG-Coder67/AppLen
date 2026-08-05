@@ -12,3 +12,7 @@ venv/
 
 # VS Code Local History
 .history/
+
+# Python cache
+__pycache__/
+*.py[cod]

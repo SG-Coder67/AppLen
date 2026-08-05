@@ -1,23 +1,16 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker 
-from sqlalchemy.orm import DeclarativeBase
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
-DATABASE_URL = (
-    f"postgresql://{DB_USER}:{DB_PASSWORD}"
-    f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-)
+from sqlalchemy.orm import sessionmaker,DeclarativeBase,Session
+from typing import Generator
+from app.config import DATABASE_URL
 engine = create_engine(DATABASE_URL)
 SessionLocal=sessionmaker(bind=engine,
                           autoflush=False,
                           autocommit=False)
 class Base(DeclarativeBase):
     pass
-
+def get_db() -> Generator[Session, None, None]:
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
