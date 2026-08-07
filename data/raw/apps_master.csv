@@ -1,0 +1,105 @@
+app_name,category
+Spotify,Music
+Apple Music,Music
+YouTube Music,Music
+Amazon Music,Music
+JioSaavn,Music
+Gaana,Music
+
+Netflix,Streaming
+Amazon Prime Video,Streaming
+Disney+,Streaming
+JioHotstar,Streaming
+SonyLIV,Streaming
+ZEE5,Streaming
+
+Coursera,Education
+Udemy,Education
+Duolingo,Education
+Khan Academy,Education
+Unacademy,Education
+BYJU'S,Education
+
+Notion,Productivity
+Evernote,Productivity
+Todoist,Productivity
+Microsoft 365,Productivity
+Google Workspace,Productivity
+TickTick,Productivity
+
+Google One,Cloud Storage
+Dropbox,Cloud Storage
+Microsoft OneDrive,Cloud Storage
+iCloud+,Cloud Storage
+MEGA,Cloud Storage
+Box,Cloud Storage
+
+ChatGPT,AI Tools
+Claude,AI Tools
+Google Gemini,AI Tools
+Perplexity AI,AI Tools
+Grammarly,AI Tools
+GitHub Copilot,AI Tools
+
+Cult.fit,Health & Fitness
+MyFitnessPal,Health & Fitness
+Strava,Health & Fitness
+Fitbit Premium,Health & Fitness
+Nike Run Club,Health & Fitness
+Cure.fit,Health & Fitness
+
+Groww,Finance
+Zerodha Kite,Finance
+INDmoney,Finance
+TradingView,Finance
+Moneycontrol Pro,Finance
+ET Money,Finance
+
+Amazon Shopping,Shopping
+Flipkart,Shopping
+Myntra,Shopping
+Meesho,Shopping
+Ajio,Shopping
+Nykaa,Shopping
+
+WhatsApp Business,Communication
+Telegram Premium,Communication
+Discord Nitro,Communication
+Slack,Communication
+Zoom,Communication
+Microsoft Teams,Communication
+
+Airbnb,Travel
+Booking.com,Travel
+MakeMyTrip,Travel
+ixigo,Travel
+Goibibo,Travel
+Agoda,Travel
+
+Canva,Design
+Adobe Express,Design
+Figma,Design
+Picsart,Design
+VistaCreate,Design
+Sketch,Design
+
+Adobe Lightroom,Photo & Video
+CapCut,Photo & Video
+InShot,Photo & Video
+VN Editor,Photo & Video
+KineMaster,Photo & Video
+Filmora,Photo & Video
+
+GitHub,Developer Tools
+Postman,Developer Tools
+JetBrains IDEs,Developer Tools
+GitKraken,Developer Tools
+Replit,Developer Tools
+CodeSandbox,Developer Tools
+
+NordVPN,Security & VPN
+ExpressVPN,Security & VPN
+Proton VPN,Security & VPN
+Surfshark,Security & VPN
+Bitwarden,Security & VPN
+1Password,Security & VPN

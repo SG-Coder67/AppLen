@@ -1,0 +1,91 @@
+app_name,category,developer,rating,downloads
+Spotify,Music,Spotify AB,4.1534467,1000000000.0
+Apple Music,Music,Apple,4.153107,100000000.0
+YouTube Music,Music,Google LLC,4.14588,5000000000.0
+Amazon Music,Music,Amazon Mobile LLC,3.951367,100000000.0
+JioSaavn,Music,Saavn Media Limited,4.4382777,500000000.0
+Gaana,Music,Entertainment Network (India) Ltd.,3.9576561,100000000.0
+Netflix,Streaming,"Netflix, Inc.",3.9847584,1000000000.0
+Amazon Prime Video,Streaming,Amazon Mobile LLC,3.9926503,500000000.0
+Disney+,Streaming,JIOSTAR INDIA PRIVATE LIMITED,4.328112,1000000000.0
+JioHotstar,Streaming,JIOSTAR INDIA PRIVATE LIMITED,4.3281093,1000000000.0
+SonyLIV,Streaming,Sony Pictures Networks India Private Limited,3.558837,100000000.0
+ZEE5,Streaming,Z5X Global FZ LLC,4.425504,100000000.0
+Coursera,Education,"Coursera, Inc.",4.460456,10000000.0
+Udemy,Education,Udemy,4.4706283,10000000.0
+Duolingo,Education,Duolingo,4.5876904,500000000.0
+Khan Academy,Education,Khan Academy,4.4075146,10000000.0
+Unacademy,Education,Unacademy,4.1199946,100000000.0
+BYJU'S,Education,Toppr,4.0564227,100000000.0
+Notion,Productivity,"Notion Labs, Inc.",4.596298,10000000.0
+Evernote,Productivity,Evernote by Bending Spoons,3.5770147,100000000.0
+Todoist,Productivity,Doist Inc.,4.603322,10000000.0
+Microsoft 365,Productivity,Microsoft Corporation,4.396221,1000000000.0
+Google Workspace,Productivity,Google LLC,4.6256948,1000000000.0
+TickTick,Productivity,TickTick Limited,4.604452,10000000.0
+Google One,Cloud Storage,Google LLC,4.0278635,1000000000.0
+Dropbox,Cloud Storage,"Dropbox, Inc.",4.450789,1000000000.0
+Microsoft OneDrive,Cloud Storage,Microsoft Corporation,4.4098153,5000000000.0
+iCloud+,Cloud Storage,,,
+MEGA,Cloud Storage,Mega Ltd,4.4094586,100000000.0
+Box,Cloud Storage,Box,4.4517612,10000000.0
+ChatGPT,AI Tools,OpenAI,4.4883943,1000000000.0
+Claude,AI Tools,Anthropic PBC,4.4997973,50000000.0
+Google Gemini,AI Tools,Google LLC,4.43132,1000000000.0
+Perplexity AI,AI Tools,PerplexityAI,4.087414,100000000.0
+Grammarly,AI Tools,"Grammarly, Inc.",4.3933153,50000000.0
+GitHub Copilot,AI Tools,GitHub,4.647161,10000000.0
+Cult.fit,Health & Fitness,Curefit Healthcare Pvt. Ltd.,4.6329517,10000000.0
+MyFitnessPal,Health & Fitness,"MyFitnessPal, Inc.",4.5307164,100000000.0
+Strava,Health & Fitness,Strava Inc.,4.6497045,100000000.0
+Fitbit Premium,Health & Fitness,Google LLC,4.1706586,100000000.0
+Nike Run Club,Health & Fitness,"Nike, Inc.",4.551692,50000000.0
+Cure.fit,Health & Fitness,Curefit Healthcare Pvt. Ltd.,4.6329517,10000000.0
+Groww,Finance,"Groww: Demat, Invest & Trade, Gold, Silver, Loans",4.7665563,100000000.0
+Zerodha Kite,Finance,Zerodha,4.4257874,10000000.0
+INDmoney,Finance,"INDmoney: Indian & US Stocks, SIP, Flash Trading",4.5615473,10000000.0
+TradingView,Finance,TradingView Inc.,4.73556,50000000.0
+Moneycontrol Pro,Finance,Network18,3.4960465,10000000.0
+ET Money,Finance,"ET Money: AMFI, SEBI Registered Investment Advisor",4.4166026,10000000.0
+Amazon Shopping,Shopping,Amazon Mobile LLC,4.195391,500000000.0
+Flipkart,Shopping,Flipkart,4.3386464,500000000.0
+Myntra,Shopping,Myntra,4.5952706,100000000.0
+Meesho,Shopping,Meesho,4.402681,500000000.0
+Ajio,Shopping,Reliance Retail Ltd,4.4235506,100000000.0
+Nykaa,Shopping,NYKAA,4.536374,50000000.0
+WhatsApp Business,Communication,WhatsApp LLC,4.4786663,1000000000.0
+Telegram Premium,Communication,Telegram FZ-LLC,4.120265,1000000000.0
+Discord Nitro,Communication,Discord Inc.,4.4666295,500000000.0
+Slack,Communication,SLACK TECHNOLOGIES L.L.C.,4.763594,10000000.0
+Zoom,Communication,zoom.com,4.137752,1000000000.0
+Microsoft Teams,Communication,Microsoft Corporation,4.6212106,500000000.0
+Airbnb,Travel,Airbnb,4.336916,100000000.0
+Booking.com,Travel,Booking.com Hotels & Vacation Rentals,4.66384,500000000.0
+MakeMyTrip,Travel,"MakeMyTrip: Flight, Hotel, Bus, IRCTC Train Ticket",4.4757233,100000000.0
+ixigo,Travel,"ixigo - IRCTC Authorised Partner, Flight Tickets",4.7519293,10000000.0
+Goibibo,Travel,"Goibibo — Hotel, Flight, IRCTC Authorised Partner",4.5470815,50000000.0
+Agoda,Travel,agoda.com,4.1653438,100000000.0
+Canva,Design,Canva,4.5553784,500000000.0
+Adobe Express,Design,Adobe,4.437608,100000000.0
+Figma,Design,Figma Inc.,4.378158,5000000.0
+Picsart,Design,"PicsArt, Inc.",4.213304,1000000000.0
+VistaCreate,Design,Crello Ltd.,4.3915095,5000000.0
+Sketch,Design,Sketchbook,3.9529667,100000000.0
+Adobe Lightroom,Photo & Video,Adobe,4.3462386,100000000.0
+CapCut,Photo & Video,BIRVA TEPI NOTE,,0.0
+InShot,Photo & Video,InShot Video Editor,4.719653,500000000.0
+VN Editor,Photo & Video,"Ubiquiti Labs, LLC",4.598341,100000000.0
+KineMaster,Photo & Video,"KineMaster, Video Editor Experts Group",4.349023,500000000.0
+Filmora,Photo & Video,Wondershare Filmora,4.158215,100000000.0
+GitHub,Developer Tools,GitHub,4.647161,10000000.0
+Postman,Developer Tools,Ace creation,3.6470587,10000.0
+JetBrains IDEs,Developer Tools,ALIF Technology,4.02,500000.0
+GitKraken,Developer Tools,GitHub,4.647161,10000000.0
+Replit,Developer Tools,Replit,4.520958,5000000.0
+CodeSandbox,Developer Tools,ALIF Technology,4.2376237,1000000.0
+NordVPN,Security & VPN,Nord Security,4.253386,100000000.0
+ExpressVPN,Security & VPN,ExpressVPN,3.3509765,100000000.0
+Proton VPN,Security & VPN,Proton AG,4.3831496,100000000.0
+Surfshark,Security & VPN,Surfshark B.V.,4.550952,10000000.0
+Bitwarden,Security & VPN,Bitwarden Inc.,4.8034186,5000000.0
+1Password,Security & VPN,AgileBits,4.68,1000000.0
