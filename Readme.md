@@ -249,45 +249,6 @@ Development
 
 ⸻
 
-Project Structure
-
-AppLen/
-│
-├── collector/
-│   ├── collect_apps.py
-│   ├── metadata_collector.py
-│   └── clean_metadata.py
-│
-├── data/
-│   ├── raw/
-│   │   ├── apps_master.csv
-│   │   └── apps_metadata.csv
-│   │
-│   └── cleaned/
-│       └── apps_cleaned.csv
-│
-├── analytics/
-│
-├── backend/
-│   ├── app/
-│   │   ├── models/
-│   │   ├── schemas/
-│   │   ├── database.py
-│   │   └── main.py
-│   │
-│   └── tests/
-│
-├── dashboard/
-│
-├── alembic/
-│   └── versions/
-│
-├── .gitignore
-├── README.md
-└── requirements.txt
-
-⸻
-
 Example Data Cleaning
 
 Raw download values such as:
@@ -494,7 +455,5 @@ B.Tech Information Technology
 VIT Vellore
 
 ⸻
-
-License
 
 This project is intended primarily for educational, portfolio, and analytical purposes.
