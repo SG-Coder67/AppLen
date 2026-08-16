@@ -1,0 +1,91 @@
+app_name,category,developer,rating,downloads,monthly_price,yearly_price,currency,free_trial_days,pricing_type,pricing_source,pricing_date,pricing_status
+Spotify,Music,Spotify AB,4.1534467,1000000000.0,139.0,1390.0,INR,,Subscription,Official website,2026-08-11,Verified
+Apple Music,Music,Apple,4.153107,100000000.0,139.0,,INR,,Subscription,Official website,2026-08-11,Verified
+YouTube Music,Music,Google LLC,4.14588,5000000000.0,,,,,Subscription,Official website,2026-08-11,Not publicly available
+Amazon Music,Music,Amazon Mobile LLC,3.951367,100000000.0,119.0,,INR,,Subscription,Official website,2026-08-11,Verified
+JioSaavn,Music,Saavn Media Limited,4.4382777,500000000.0,,,,,Subscription,Official website,2026-08-11,Not publicly available
+Gaana,Music,Entertainment Network (India) Ltd.,3.9576561,100000000.0,,,,,Subscription,Official website,2026-08-11,Not publicly available
+Netflix,Streaming,"Netflix, Inc.",3.9847584,1000000000.0,499.0,,INR,,Subscription,Official website,2026-08-11,Verified
+Amazon Prime Video,Streaming,Amazon Mobile LLC,3.9926503,500000000.0,299.0,1499.0,INR,,Subscription,Official website,2026-08-11,Verified
+Disney+,Streaming,JIOSTAR INDIA PRIVATE LIMITED,4.328112,1000000000.0,,,,,Subscription,Official website,2026-08-11,Not applicable
+JioHotstar,Streaming,JIOSTAR INDIA PRIVATE LIMITED,4.3281093,1000000000.0,,,,,Subscription,Official website,2026-08-11,Not publicly available
+SonyLIV,Streaming,Sony Pictures Networks India Private Limited,3.558837,100000000.0,399.0,1499.0,INR,,Subscription,Official website,2026-08-11,Verified
+ZEE5,Streaming,Z5X Global FZ LLC,4.425504,100000000.0,399.0,1699.0,INR,,Subscription,Official website,2026-08-11,Verified
+Coursera,Education,"Coursera, Inc.",4.460456,10000000.0,,,,7.0,Subscription,Official website,2026-08-11,Verified
+Udemy,Education,Udemy,4.4706283,10000000.0,,,,,Mixed,Official website,2026-08-11,Verified
+Duolingo,Education,Duolingo,4.5876904,500000000.0,,,,,Freemium,Official website,2026-08-11,Not publicly available
+Khan Academy,Education,Khan Academy,4.4075146,10000000.0,0.0,0.0,INR,0.0,Free,Official website,2026-08-11,Verified
+Unacademy,Education,Unacademy,4.1199946,100000000.0,,,,,Subscription,Official website,2026-08-11,Not publicly comparable
+BYJU'S,Education,Toppr,4.0564227,100000000.0,,,,,Subscription,Official website,2026-08-11,Not publicly available
+Notion,Productivity,"Notion Labs, Inc.",4.596298,10000000.0,,,,,Freemium,Official website,2026-08-11,Verified
+Evernote,Productivity,Evernote by Bending Spoons,3.5770147,100000000.0,,,,,Freemium,Official website,2026-08-11,Not publicly available
+Todoist,Productivity,Doist Inc.,4.603322,10000000.0,7.0,60.0,USD,7.0,Freemium,Official website,2026-08-15,Verified
+Microsoft 365,Productivity,Microsoft Corporation,4.396221,1000000000.0,,6899.0,INR,,Subscription,Official website,2026-08-15,Verified
+Google Workspace,Productivity,Google LLC,4.6256948,1000000000.0,193.38,2320.56,INR,14.0,Subscription,Official website,2026-08-15,Verified
+TickTick,Productivity,TickTick Limited,4.604452,10000000.0,4.17,49.99,USD,,Freemium,Official website,2026-08-15,Verified
+Google One,Cloud Storage,Google LLC,4.0278635,1000000000.0,59.0,,INR,,Freemium,Official website,2026-08-15,Verified
+Dropbox,Cloud Storage,"Dropbox, Inc.",4.450789,1000000000.0,9.99,,USD,30.0,Freemium,Official website,2026-08-15,Verified
+Microsoft OneDrive,Cloud Storage,Microsoft Corporation,4.4098153,5000000000.0,149.0,1499.0,INR,,Freemium,Official website,2026-08-15,Verified
+iCloud+,Cloud Storage,Apple,,,75.0,,INR,,Subscription,Official website,2026-08-15,Verified
+MEGA,Cloud Storage,Mega Ltd,4.4094586,100000000.0,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+Box,Cloud Storage,Box,4.4517612,10000000.0,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+ChatGPT,AI Tools,OpenAI,4.4883943,1000000000.0,20.0,,USD,,Freemium,Official website,2026-08-15,Verified
+Claude,AI Tools,Anthropic PBC,4.4997973,50000000.0,20.0,200.0,USD,,Freemium,Official website,2026-08-15,Verified
+Google Gemini,AI Tools,Google LLC,4.43132,1000000000.0,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+Perplexity AI,AI Tools,PerplexityAI,4.087414,100000000.0,20.0,200.0,USD,,Freemium,Official website,2026-08-15,Verified
+Grammarly,AI Tools,"Grammarly, Inc.",4.3933153,50000000.0,30.0,144.0,USD,,Freemium,Official website,2026-08-15,Verified
+GitHub Copilot,AI Tools,GitHub,4.647161,10000000.0,10.0,100.0,USD,,Freemium,Official website,2026-08-15,Verified
+Cult.fit,Health & Fitness,Curefit Healthcare Pvt. Ltd.,4.6329517,10000000.0,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+MyFitnessPal,Health & Fitness,"MyFitnessPal, Inc.",4.5307164,100000000.0,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+Strava,Health & Fitness,Strava Inc.,4.6497045,100000000.0,6.67,79.99,USD,30.0,Freemium,Official website,2026-08-15,Verified
+Fitbit Premium,Health & Fitness,Google LLC,4.1706586,100000000.0,,,,,Subscription,Official website,2026-08-15,Not publicly available
+Nike Run Club,Health & Fitness,"Nike, Inc.",4.551692,50000000.0,0.0,0.0,INR,0.0,Free,Official website,2026-08-11,Verified
+Cure.fit,Health & Fitness,Curefit Healthcare Pvt. Ltd.,4.6329517,10000000.0,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Groww,Finance,"Groww: Demat, Invest & Trade, Gold, Silver, Loans",4.7665563,100000000.0,,,,,Transaction-based,Official website,2026-08-15,Verified
+Zerodha Kite,Finance,Zerodha,4.4257874,10000000.0,,,,,Transaction-based,Official website,2026-08-15,Verified
+INDmoney,Finance,"INDmoney: Indian & US Stocks, SIP, Flash Trading",4.5615473,10000000.0,,,,,Mixed,Official website,2026-08-15,Verified
+TradingView,Finance,TradingView Inc.,4.73556,50000000.0,,,,,Subscription,Official website,2026-08-15,Verified
+Moneycontrol Pro,Finance,Network18,3.4960465,10000000.0,,,,,Subscription,Official website,2026-08-15,Verified
+ET Money,Finance,"ET Money: AMFI, SEBI Registered Investment Advisor",4.4166026,10000000.0,,,,,Mixed,Official website,2026-08-15,Verified
+Amazon Shopping,Shopping,Amazon Mobile LLC,4.195391,500000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+Flipkart,Shopping,Flipkart,4.3386464,500000000.0,,,,,Mixed,Official website,2026-08-11,Verified
+Myntra,Shopping,Myntra,4.5952706,100000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+Meesho,Shopping,Meesho,4.402681,500000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+Ajio,Shopping,Reliance Retail Ltd,4.4235506,100000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+Nykaa,Shopping,NYKAA,4.536374,50000000.0,0.0,0.0,INR,0.0,Free,Official website,2026-08-11,Verified
+WhatsApp Business,Communication,WhatsApp LLC,4.4786663,1000000000.0,,,INR,,Transaction-based,Official website,2026-08-11,Verified
+Telegram Premium,Communication,Telegram FZ-LLC,4.120265,1000000000.0,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Discord Nitro,Communication,Discord Inc.,4.4666295,500000000.0,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Slack,Communication,SLACK TECHNOLOGIES L.L.C.,4.763594,10000000.0,8.75,,USD,,Subscription,Official website,2026-08-15,Verified
+Zoom,Communication,zoom.com,4.137752,1000000000.0,,,USD,,Subscription,Official website,2026-08-15,Not publicly comparable
+Microsoft Teams,Communication,Microsoft Corporation,4.6212106,500000000.0,115.0,,INR,30.0,Subscription,Official website,2026-08-15,Verified
+Airbnb,Travel,Airbnb,4.336916,100000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+Booking.com,Travel,Booking.com Hotels & Vacation Rentals,4.66384,500000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+MakeMyTrip,Travel,"MakeMyTrip: Flight, Hotel, Bus, IRCTC Train Ticket",4.4757233,100000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+ixigo,Travel,"ixigo - IRCTC Authorised Partner, Flight Tickets",4.7519293,10000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+Goibibo,Travel,"Goibibo — Hotel, Flight, IRCTC Authorised Partner",4.5470815,50000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+Agoda,Travel,agoda.com,4.1653438,100000000.0,,,,,Transaction-based,Official website,2026-08-11,Verified
+Canva,Design,Canva,4.5553784,500000000.0,499.0,3999.0,INR,,Freemium,Official website,2026-08-15,Verified
+Adobe Express,Design,Adobe,4.437608,100000000.0,398.84,,INR,,Freemium,Official website,2026-08-15,Verified
+Figma,Design,Figma Inc.,4.378158,5000000.0,16.0,,USD,,Freemium,Official website,2026-08-15,Verified
+Picsart,Design,"PicsArt, Inc.",4.213304,1000000000.0,10.5,126.0,USD,,Freemium,Official website,2026-08-15,Verified
+VistaCreate,Design,Crello Ltd.,4.3915095,5000000.0,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+Sketch,Design,Sketchbook,3.9529667,100000000.0,12.0,,USD,30.0,Subscription,Official website,2026-08-15,Verified
+Adobe Lightroom,Photo & Video,Adobe,4.3462386,100000000.0,382.32,3823.2,INR,7.0,Freemium,Official website,2026-08-15,Verified
+CapCut,Photo & Video,Bytedance Pte. Ltd.,3.6,1000000000.0,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+InShot,Photo & Video,InShot Video Editor,4.719653,500000000.0,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+VN Editor,Photo & Video,"Ubiquiti Labs, LLC",4.598341,100000000.0,0.0,0.0,INR,0.0,Free,Official website,2026-08-15,Verified
+KineMaster,Photo & Video,"KineMaster, Video Editor Experts Group",4.349023,500000000.0,4.33,51.99,USD,,Freemium,Official website,2026-08-15,Verified
+Filmora,Photo & Video,Wondershare Filmora,4.158215,100000000.0,19.99,59.99,USD,,Freemium,Official website,2026-08-15,Verified
+GitHub,Developer Tools,GitHub,4.647161,10000000.0,0.0,0.0,USD,0.0,Freemium,Official website,2026-08-15,Verified
+Postman,Developer Tools,Ace creation,3.6470587,10000.0,0.0,,USD,,Freemium,Official website,2026-08-15,Verified
+JetBrains IDEs,Developer Tools,ALIF Technology,4.02,500000.0,,,,,Freemium,Official website,2026-08-15,Verified
+GitKraken,Developer Tools,GitHub,4.647161,10000000.0,6.0,72.0,USD,14.0,Freemium,Official website,2026-08-15,Verified
+Replit,Developer Tools,Replit,4.520958,5000000.0,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+CodeSandbox,Developer Tools,ALIF Technology,4.2376237,1000000.0,0.0,,USD,,Freemium,Official website,2026-08-15,Verified
+NordVPN,Security & VPN,Nord Security,4.253386,100000000.0,14.99,,USD,,Subscription,Official website,2026-08-15,Verified
+ExpressVPN,Security & VPN,ExpressVPN,3.3509765,100000000.0,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Proton VPN,Security & VPN,Proton AG,4.3831496,100000000.0,0.0,0.0,USD,0.0,Freemium,Official website,2026-08-15,Verified
+Surfshark,Security & VPN,Surfshark B.V.,4.550952,10000000.0,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Bitwarden,Security & VPN,Bitwarden Inc.,4.8034186,5000000.0,1.65,19.8,USD,,Freemium,Official website,2026-08-15,Verified
+1Password,Security & VPN,AgileBits,4.68,1000000.0,4.0,48.0,USD,14.0,Subscription,Official website,2026-08-15,Verified

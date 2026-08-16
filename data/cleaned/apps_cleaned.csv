@@ -26,7 +26,7 @@ TickTick,Productivity,TickTick Limited,4.604452,10000000.0
 Google One,Cloud Storage,Google LLC,4.0278635,1000000000.0
 Dropbox,Cloud Storage,"Dropbox, Inc.",4.450789,1000000000.0
 Microsoft OneDrive,Cloud Storage,Microsoft Corporation,4.4098153,5000000000.0
-iCloud+,Cloud Storage,,,
+iCloud+,Cloud Storage,Apple,,
 MEGA,Cloud Storage,Mega Ltd,4.4094586,100000000.0
 Box,Cloud Storage,Box,4.4517612,10000000.0
 ChatGPT,AI Tools,OpenAI,4.4883943,1000000000.0
@@ -72,7 +72,7 @@ Picsart,Design,"PicsArt, Inc.",4.213304,1000000000.0
 VistaCreate,Design,Crello Ltd.,4.3915095,5000000.0
 Sketch,Design,Sketchbook,3.9529667,100000000.0
 Adobe Lightroom,Photo & Video,Adobe,4.3462386,100000000.0
-CapCut,Photo & Video,BIRVA TEPI NOTE,,0.0
+CapCut,Photo & Video,Bytedance Pte. Ltd.,3.6,1000000000.0
 InShot,Photo & Video,InShot Video Editor,4.719653,500000000.0
 VN Editor,Photo & Video,"Ubiquiti Labs, LLC",4.598341,100000000.0
 KineMaster,Photo & Video,"KineMaster, Video Editor Experts Group",4.349023,500000000.0

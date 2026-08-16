@@ -1,0 +1,111 @@
+app_name,monthly_price,yearly_price,currency,free_trial_days,pricing_type,pricing_source,pricing_date,pricing_status
+Spotify,139,1390,INR,,Subscription,Official website,2026-08-11,Verified
+Apple Music,139,,INR,,Subscription,Official website,2026-08-11,Verified
+YouTube Music,,,,,Subscription,Official website,2026-08-11,Not publicly available
+Amazon Music,119,,INR,,Subscription,Official website,2026-08-11,Verified
+JioSaavn,,,,,Subscription,Official website,2026-08-11,Not publicly available
+Gaana,,,,,Subscription,Official website,2026-08-11,Not publicly available
+
+Netflix,499,,INR,,Subscription,Official website,2026-08-11,Verified
+Amazon Prime Video,299,1499,INR,,Subscription,Official website,2026-08-11,Verified
+Disney+,,,,,Subscription,Official website,2026-08-11,Not applicable
+JioHotstar,,,,,Subscription,Official website,2026-08-11,Not publicly available
+SonyLIV,399,1499,INR,,Subscription,Official website,2026-08-11,Verified
+ZEE5,399,1699,INR,,Subscription,Official website,2026-08-11,Verified
+
+Coursera,,,,7,Subscription,Official website,2026-08-11,Verified
+Udemy,,,,,Mixed,Official website,2026-08-11,Verified
+Duolingo,,,,,Freemium,Official website,2026-08-11,Not publicly available
+Khan Academy,0,0,INR,0,Free,Official website,2026-08-11,Verified
+Unacademy,,,,,Subscription,Official website,2026-08-11,Not publicly comparable
+BYJU'S,,,,,Subscription,Official website,2026-08-11,Not publicly available
+
+Notion,,,,,Freemium,Official website,2026-08-11,Verified
+Evernote,,,,,Freemium,Official website,2026-08-11,Not publicly available
+Todoist,7,60,USD,7,Freemium,Official website,2026-08-15,Verified
+Microsoft 365,,6899,INR,,Subscription,Official website,2026-08-15,Verified
+Google Workspace,193.38,2320.56,INR,14,Subscription,Official website,2026-08-15,Verified
+TickTick,4.17,49.99,USD,,Freemium,Official website,2026-08-15,Verified
+
+Google One,59,,INR,,Freemium,Official website,2026-08-15,Verified
+Dropbox,9.99,,USD,30,Freemium,Official website,2026-08-15,Verified
+Microsoft OneDrive,149,1499,INR,,Freemium,Official website,2026-08-15,Verified
+iCloud+,75,,INR,,Subscription,Official website,2026-08-15,Verified
+MEGA,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+Box,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+
+ChatGPT,20,,USD,,Freemium,Official website,2026-08-15,Verified
+Google Gemini,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+Cult.fit,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+MyFitnessPal,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+Strava,6.67,79.99,USD,30,Freemium,Official website,2026-08-15,Verified
+Fitbit Premium,,,,,Subscription,Official website,2026-08-15,Not publicly available
+Cure.fit,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+
+Cult.fit,,,,,Subscription,Official website,2026-08-11,Not publicly available
+MyFitnessPal,,,,,Freemium,Official website,2026-08-11,Not publicly available
+Strava,,,,,Freemium,Official website,2026-08-11,Not publicly available
+Fitbit Premium,,,,,Subscription,Official website,2026-08-11,Not publicly available
+Nike Run Club,0,0,INR,0,Free,Official website,2026-08-11,Verified
+Cure.fit,,,,,Subscription,Official website,2026-08-11,Not publicly available
+
+Groww,,,,,Transaction-based,Official website,2026-08-15,Verified
+Zerodha Kite,,,,,Transaction-based,Official website,2026-08-15,Verified
+INDmoney,,,,,Mixed,Official website,2026-08-15,Verified
+TradingView,,,,,Subscription,Official website,2026-08-15,Verified
+Moneycontrol Pro,,,,,Subscription,Official website,2026-08-15,Verified
+ET Money,,,,,Mixed,Official website,2026-08-15,Verified
+
+Amazon Shopping,,,,,Transaction-based,Official website,2026-08-11,Verified
+Flipkart,,,,,Mixed,Official website,2026-08-11,Verified
+Myntra,,,,,Transaction-based,Official website,2026-08-11,Verified
+Meesho,,,,,Transaction-based,Official website,2026-08-11,Verified
+Ajio,,,,,Transaction-based,Official website,2026-08-11,Verified
+Nykaa,0,0,INR,0,Free,Official website,2026-08-11,Verified
+
+WhatsApp Business,,,INR,,Transaction-based,Official website,2026-08-11,Verified
+Telegram Premium,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Discord Nitro,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Slack,8.75,,USD,,Subscription,Official website,2026-08-15,Verified
+Zoom,,,USD,,Subscription,Official website,2026-08-15,Not publicly comparable
+Microsoft Teams,115,,INR,30,Subscription,Official website,2026-08-15,Verified
+
+Airbnb,,,,,Transaction-based,Official website,2026-08-11,Verified
+Booking.com,,,,,Transaction-based,Official website,2026-08-11,Verified
+MakeMyTrip,,,,,Transaction-based,Official website,2026-08-11,Verified
+ixigo,,,,,Transaction-based,Official website,2026-08-11,Verified
+Goibibo,,,,,Transaction-based,Official website,2026-08-11,Verified
+Agoda,,,,,Transaction-based,Official website,2026-08-11,Verified
+
+Canva,499,3999,INR,,Freemium,Official website,2026-08-15,Verified
+Adobe Express,398.84,,INR,,Freemium,Official website,2026-08-15,Verified
+Figma,16,,USD,,Freemium,Official website,2026-08-15,Verified
+Picsart,10.50,126,USD,,Freemium,Official website,2026-08-15,Verified
+VistaCreate,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+Sketch,12,,USD,30,Subscription,Official website,2026-08-15,Verified
+
+Adobe Lightroom,382.32,3823.20,INR,7,Freemium,Official website,2026-08-15,Verified
+CapCut,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+InShot,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+VN Editor,0,0,INR,0,Free,Official website,2026-08-15,Verified
+KineMaster,4.33,51.99,USD,,Freemium,Official website,2026-08-15,Verified
+Filmora,19.99,59.99,USD,,Freemium,Official website,2026-08-15,Verified
+
+GitHub,0,0,USD,0,Freemium,Official website,2026-08-15,Verified
+Postman,0,,USD,,Freemium,Official website,2026-08-15,Verified
+JetBrains IDEs,,,,,Freemium,Official website,2026-08-15,Verified
+GitKraken,6,72,USD,14,Freemium,Official website,2026-08-15,Verified
+Replit,,,,,Freemium,Official website,2026-08-15,Not publicly comparable
+CodeSandbox,0,,USD,,Freemium,Official website,2026-08-15,Verified
+
+NordVPN,14.99,,USD,,Subscription,Official website,2026-08-15,Verified
+ExpressVPN,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Proton VPN,0,0,USD,0,Freemium,Official website,2026-08-15,Verified
+Surfshark,,,,,Subscription,Official website,2026-08-15,Not publicly comparable
+Bitwarden,1.65,19.80,USD,,Freemium,Official website,2026-08-15,Verified
+1Password,4,48,USD,14,Subscription,Official website,2026-08-15,Verified
+
+Claude,20,200,USD,,Freemium,Official website,2026-08-15,Verified
+Perplexity AI,20,200,USD,,Freemium,Official website,2026-08-15,Verified
+Grammarly,30,144,USD,,Freemium,Official website,2026-08-15,Verified
+GitHub Copilot,10,100,USD,,Freemium,Official website,2026-08-15,Verified
