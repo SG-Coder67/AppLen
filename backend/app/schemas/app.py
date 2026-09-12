@@ -49,3 +49,7 @@ class AppResponse(BaseModel):
     price_adjusted_value_score: float | None = None
 
     model_config = ConfigDict(from_attributes=True)
+
+class AppComparison(BaseModel):
+    app1: AppResponse
+    app2: AppResponse
