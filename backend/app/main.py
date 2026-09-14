@@ -10,7 +10,15 @@ from app.exceptions.exception_handlers import (
     app_not_found_handler,
 )
 from app.utils import logging_config
+from fastapi.middleware.cors import CORSMiddleware
 app=FastAPI(title="AppLen API")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.add_exception_handler(
     AppAlreadyExistsException,
     app_already_exists_handler,
