@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Analytics from "./components/Analytics";
 
 const API = "http://127.0.0.1:8000";
 
@@ -204,10 +205,11 @@ const [selectedApp, setSelectedApp] = useState(null);
         </div>
 
         <nav>
-          <a href="#explore">Explore</a>
-          <a href="#rankings">Rankings</a>
-          <a href="#compare">Compare</a>
-        </nav>
+  <a href="#explore">Explore</a>
+  <a href="#rankings">Rankings</a>
+  <a href="#compare">Compare</a>
+  <a href="#analytics">Analytics</a>
+</nav>
       </header>
 
 
@@ -745,6 +747,11 @@ const [selectedApp, setSelectedApp] = useState(null);
         )}
 
       </section>
+      <section id="analytics" className="section analytics-wrapper">
+
+  <Analytics />
+
+</section>
 {selectedApp && (
   <div
     className="modal-overlay"

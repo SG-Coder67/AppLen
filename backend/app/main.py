@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.routers import apps
 from app.database import Base, engine
+from app.routers import analytics
 from app.exceptions.app_exceptions import (
     AppAlreadyExistsException,
     AppNotFoundException,
@@ -29,6 +30,7 @@ app.add_exception_handler(
     app_not_found_handler,
 )
 app.include_router(apps.router)
+app.include_router(analytics.router)
 @app.get("/")
 def root():
     return {"message": "Welcome to AppLen API"}

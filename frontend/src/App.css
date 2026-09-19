@@ -815,3 +815,43 @@ footer {
   }
 
 }
+.analytics-wrapper {
+  padding-top: 0;
+}
+
+.analytics-wrapper .analytics-page {
+  padding-left: 0;
+  padding-right: 0;
+}
+.chart-description {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.chart-note {
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.analytics-tooltip {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.analytics-tooltip strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.analytics-tooltip p {
+  margin: 4px 0;
+  color: #4b5563;
+  font-size: 13px;
+}
