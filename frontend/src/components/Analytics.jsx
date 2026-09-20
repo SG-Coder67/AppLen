@@ -22,6 +22,8 @@ function Analytics() {
   const [pricing, setPricing] = useState(null);
   const [correlations, setCorrelations] = useState(null);
   const [scatterData, setScatterData] = useState([]);
+  const [topApps, setTopApps] = useState([]);
+  const [topMetric, setTopMetric] = useState("engagement");
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -33,12 +35,14 @@ function Analytics() {
           pricingResponse,
           correlationResponse,
           scatterResponse,
+          topAppsResponse,
         ] = await Promise.all([
           fetch(`${API}/analytics/overview`),
           fetch(`${API}/analytics/categories`),
           fetch(`${API}/analytics/pricing`),
           fetch(`${API}/analytics/correlations`),
           fetch(`${API}/analytics/scatter`),
+          fetch(`${API}/apps/rankings?metric=engagement&limit=10`),
         ]);
 
         if (
@@ -46,7 +50,8 @@ function Analytics() {
           !categoryResponse.ok ||
           !pricingResponse.ok ||
           !correlationResponse.ok ||
-          !scatterResponse.ok
+          !scatterResponse.ok ||
+          !topAppsResponse.ok
         ) {
           throw new Error("Failed to load analytics");
         }
@@ -56,12 +61,14 @@ function Analytics() {
         const pricingData = await pricingResponse.json();
         const correlationData = await correlationResponse.json();
         const scatterDataResponse = await scatterResponse.json();
+        const topAppsData = await topAppsResponse.json();
 
         setOverview(overviewData);
         setCategories(categoryData);
         setPricing(pricingData);
         setCorrelations(correlationData);
         setScatterData(scatterDataResponse);
+        setTopApps(topAppsData);
       } catch (err) {
         console.error(err);
         setError("Unable to load analytics data.");
@@ -70,6 +77,25 @@ function Analytics() {
 
     loadAnalytics();
   }, []);
+
+  async function changeTopMetric(metric) {
+    try {
+      setTopMetric(metric);
+
+      const response = await fetch(
+        `${API}/apps/rankings?metric=${metric}&limit=10`
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch rankings");
+      }
+
+      const data = await response.json();
+      setTopApps(data);
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
   if (error) {
     return <div className="analytics-error">{error}</div>;
@@ -91,19 +117,15 @@ function Analytics() {
 
   const ratingPopularityData = scatterData.filter(
     (app) =>
-      app.rating !== null &&
-      app.rating !== undefined &&
-      app.popularity !== null &&
-      app.popularity !== undefined
+      app.rating != null &&
+      app.popularity != null
   );
 
   const priceEngagementData = scatterData.filter(
     (app) =>
-      app.price !== null &&
-      app.price !== undefined &&
+      app.price != null &&
       app.price > 0 &&
-      app.engagement !== null &&
-      app.engagement !== undefined
+      app.engagement != null
   );
 
   const CustomTooltip = ({ active, payload }) => {
@@ -117,19 +139,19 @@ function Analytics() {
       <div className="analytics-tooltip">
         <strong>{app.app_name}</strong>
 
-        {app.rating !== null && app.rating !== undefined && (
+        {app.rating != null && (
           <p>Rating: {app.rating.toFixed(2)}</p>
         )}
 
-        {app.popularity !== null && app.popularity !== undefined && (
+        {app.popularity != null && (
           <p>Popularity: {app.popularity.toFixed(2)}</p>
         )}
 
-        {app.price !== null && app.price !== undefined && (
+        {app.price != null && (
           <p>Price: ₹{app.price.toFixed(0)}/month</p>
         )}
 
-        {app.engagement !== null && app.engagement !== undefined && (
+        {app.engagement != null && (
           <p>Engagement: {app.engagement.toFixed(2)}</p>
         )}
       </div>
@@ -141,16 +163,14 @@ function Analytics() {
 
       {/* HEADER */}
       <div className="analytics-header">
-        <div>
-          <h1>App Analytics</h1>
-          <p>
-            Explore market patterns across the applications analyzed in
-            AppLen.
-          </p>
-        </div>
+        <h1>App Analytics</h1>
+        <p>
+          Explore market patterns across the applications analyzed in
+          AppLen.
+        </p>
       </div>
 
-      {/* OVERVIEW CARDS */}
+      {/* OVERVIEW */}
       <div className="analytics-cards">
 
         <div className="analytics-card">
@@ -190,6 +210,7 @@ function Analytics() {
       {/* CATEGORY ENGAGEMENT */}
       <div className="analytics-section">
         <div className="analytics-panel large-panel">
+
           <h2>Average Engagement by Category</h2>
 
           <ResponsiveContainer width="100%" height={420}>
@@ -224,6 +245,7 @@ function Analytics() {
               />
             </BarChart>
           </ResponsiveContainer>
+
         </div>
       </div>
 
@@ -231,10 +253,12 @@ function Analytics() {
       <div className="analytics-grid">
 
         <div className="analytics-panel">
+
           <h2>Pricing Models</h2>
 
           <ResponsiveContainer width="100%" height={320}>
             <PieChart>
+
               <Pie
                 data={pricingData}
                 dataKey="value"
@@ -250,15 +274,19 @@ function Analytics() {
               </Pie>
 
               <Tooltip />
+
             </PieChart>
           </ResponsiveContainer>
+
         </div>
 
         <div className="analytics-panel">
+
           <h2>Price Tiers</h2>
 
           <ResponsiveContainer width="100%" height={320}>
             <BarChart data={priceTierData}>
+
               <CartesianGrid strokeDasharray="3 3" />
 
               <XAxis dataKey="name" />
@@ -271,8 +299,10 @@ function Analytics() {
                 dataKey="value"
                 name="Apps"
               />
+
             </BarChart>
           </ResponsiveContainer>
+
         </div>
 
       </div>
@@ -281,6 +311,7 @@ function Analytics() {
       <div className="analytics-grid">
 
         <div className="analytics-panel">
+
           <h2>Rating vs Popularity</h2>
 
           <p className="chart-description">
@@ -288,14 +319,8 @@ function Analytics() {
           </p>
 
           <ResponsiveContainer width="100%" height={360}>
-            <ScatterChart
-              margin={{
-                top: 20,
-                right: 20,
-                bottom: 20,
-                left: 10,
-              }}
-            >
+            <ScatterChart>
+
               <CartesianGrid />
 
               <XAxis
@@ -303,7 +328,6 @@ function Analytics() {
                 dataKey="rating"
                 name="Rating"
                 domain={[3, 5]}
-                tickCount={5}
               />
 
               <YAxis
@@ -319,15 +343,18 @@ function Analytics() {
                 name="Apps"
                 data={ratingPopularityData}
               />
+
             </ScatterChart>
           </ResponsiveContainer>
 
           <p className="chart-note">
             Correlation: {correlations.rating_vs_popularity}
           </p>
+
         </div>
 
         <div className="analytics-panel">
+
           <h2>Price vs Engagement</h2>
 
           <p className="chart-description">
@@ -336,14 +363,8 @@ function Analytics() {
           </p>
 
           <ResponsiveContainer width="100%" height={360}>
-            <ScatterChart
-              margin={{
-                top: 20,
-                right: 20,
-                bottom: 20,
-                left: 10,
-              }}
-            >
+            <ScatterChart>
+
               <CartesianGrid />
 
               <XAxis
@@ -365,18 +386,225 @@ function Analytics() {
                 name="Apps"
                 data={priceEngagementData}
               />
+
             </ScatterChart>
           </ResponsiveContainer>
 
           <p className="chart-note">
             Correlation: {correlations.price_vs_engagement}
           </p>
+
+        </div>
+
+      </div>
+
+      {/* TOP APPS */}
+      <div className="analytics-section">
+
+        <div className="analytics-panel">
+
+          <div className="top-apps-header">
+
+            <div>
+              <h2>Top Apps</h2>
+              <p>
+                Compare the highest-ranked apps across key metrics.
+              </p>
+            </div>
+
+            <div className="ranking-buttons">
+
+              <button
+                className={topMetric === "engagement" ? "active" : ""}
+                onClick={() => changeTopMetric("engagement")}
+              >
+                Engagement
+              </button>
+
+              <button
+                className={topMetric === "popularity" ? "active" : ""}
+                onClick={() => changeTopMetric("popularity")}
+              >
+                Popularity
+              </button>
+
+              <button
+                className={topMetric === "rating" ? "active" : ""}
+                onClick={() => changeTopMetric("rating")}
+              >
+                Rating
+              </button>
+
+              <button
+                className={topMetric === "value" ? "active" : ""}
+                onClick={() => changeTopMetric("value")}
+              >
+                Value
+              </button>
+
+            </div>
+
+          </div>
+
+          <div className="top-apps-table-wrapper">
+
+            <table className="top-apps-table">
+
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>App</th>
+                  <th>Category</th>
+                  <th>Rating</th>
+                  <th>Popularity</th>
+                  <th>Engagement</th>
+                  <th>Monthly Price</th>
+                  <th>Price Tier</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {topApps.map((app, index) => (
+                  <tr key={app.id}>
+
+                    <td className="rank-number">
+                      {index + 1}
+                    </td>
+
+                    <td className="app-name-cell">
+                      <strong>{app.app_name}</strong>
+                      <span>{app.developer}</span>
+                    </td>
+
+                    <td>{app.category}</td>
+
+                    <td>
+                      {app.rating != null
+                        ? app.rating.toFixed(2)
+                        : "N/A"}
+                    </td>
+
+                    <td>
+                      {app.popularity_score != null
+                        ? app.popularity_score.toFixed(1)
+                        : "N/A"}
+                    </td>
+
+                    <td>
+                      {app.engagement_score != null
+                        ? app.engagement_score.toFixed(1)
+                        : "N/A"}
+                    </td>
+
+                    <td>
+                      {app.normalized_monthly_price != null
+                        ? `₹${app.normalized_monthly_price.toFixed(0)}`
+                        : "N/A"}
+                    </td>
+
+                    <td>
+                      <span className="price-tier">
+                        {app.price_tier || "N/A"}
+                      </span>
+                    </td>
+
+                  </tr>
+                ))}
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* CATEGORY COMPARISON */}
+      <div className="analytics-section">
+
+        <div className="analytics-panel">
+
+          <div className="top-apps-header">
+
+            <div>
+              <h2>Category Comparison</h2>
+              <p>
+                Compare performance and pricing patterns across app
+                categories.
+              </p>
+            </div>
+
+          </div>
+
+          <div className="top-apps-table-wrapper">
+
+            <table className="top-apps-table">
+
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Apps</th>
+                  <th>Avg Rating</th>
+                  <th>Avg Popularity</th>
+                  <th>Avg Engagement</th>
+                  <th>Avg Monthly Price</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                {categories.map((category) => (
+                  <tr key={category.category}>
+
+                    <td>
+                      <strong>{category.category}</strong>
+                    </td>
+
+                    <td>{category.app_count}</td>
+
+                    <td>
+                      {category.avg_rating != null
+                        ? category.avg_rating.toFixed(2)
+                        : "N/A"}
+                    </td>
+
+                    <td>
+                      {category.avg_popularity != null
+                        ? category.avg_popularity.toFixed(1)
+                        : "N/A"}
+                    </td>
+
+                    <td>
+                      {category.avg_engagement != null
+                        ? category.avg_engagement.toFixed(1)
+                        : "N/A"}
+                    </td>
+
+                    <td>
+                      {category.avg_monthly_price != null
+                        ? `₹${category.avg_monthly_price.toFixed(0)}`
+                        : "N/A"}
+                    </td>
+
+                  </tr>
+                ))}
+
+              </tbody>
+
+            </table>
+
+          </div>
+
         </div>
 
       </div>
 
       {/* CORRELATIONS */}
       <div className="analytics-section">
+
         <div className="analytics-panel">
 
           <h2>Key Relationships</h2>
@@ -412,7 +640,9 @@ function Analytics() {
             </div>
 
           </div>
+
         </div>
+
       </div>
 
       {/* INSIGHTS */}
@@ -459,6 +689,7 @@ function Analytics() {
           </div>
 
         </div>
+
       </div>
 
     </div>
