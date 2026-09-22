@@ -231,3 +231,107 @@ def get_scatter_data(db: Session = Depends(get_db)):
         }
         for app in apps
     ]
+@router.get("/insights")
+def get_insights(db: Session = Depends(get_db)):
+
+    insights = []
+
+    # Highest engagement category
+    category = (
+        db.query(
+            App.category,
+            func.avg(App.engagement_score).label("avg_engagement")
+        )
+        .filter(App.engagement_score.isnot(None))
+        .group_by(App.category)
+        .order_by(func.avg(App.engagement_score).desc())
+        .first()
+    )
+
+    if category:
+        insights.append({
+            "title": "Highest average engagement",
+            "text": (
+                f"{category.category} has the highest average engagement "
+                f"score in the analyzed dataset ({category.avg_engagement:.2f})."
+            )
+        })
+
+    # Most common pricing model
+    pricing = (
+        db.query(
+            App.pricing_type,
+            func.count(App.id).label("count")
+        )
+        .group_by(App.pricing_type)
+        .order_by(func.count(App.id).desc())
+        .first()
+    )
+
+    if pricing:
+        insights.append({
+            "title": "Most common pricing model",
+            "text": (
+                f"{pricing.pricing_type} is the most common pricing model "
+                f"in the dataset ({pricing.count} apps)."
+            )
+        })
+
+    # Highest popularity
+    popular = (
+        db.query(App.app_name, App.popularity_score)
+        .filter(App.popularity_score.isnot(None))
+        .order_by(App.popularity_score.desc())
+        .first()
+    )
+
+    if popular:
+        insights.append({
+            "title": "Highest popularity",
+            "text": (
+                f"{popular.app_name} has the highest popularity score "
+                f"among the analyzed apps ({popular.popularity_score:.2f})."
+            )
+        })
+
+    # Highest rated
+    rated = (
+        db.query(App.app_name, App.rating)
+        .filter(App.rating.isnot(None))
+        .order_by(App.rating.desc())
+        .first()
+    )
+
+    if rated:
+        insights.append({
+            "title": "Highest rating",
+            "text": (
+                f"{rated.app_name} has the highest observed rating "
+                f"({rated.rating:.2f}) in the dataset."
+            )
+        })
+
+    # Pricing coverage
+    total_apps = db.query(func.count(App.id)).scalar()
+
+    comparable = (
+        db.query(func.count(App.id))
+        .filter(
+            App.normalized_monthly_price.isnot(None),
+            App.normalized_monthly_price > 0
+        )
+        .scalar()
+    )
+
+    if total_apps:
+        coverage = comparable / total_apps * 100
+
+        insights.append({
+            "title": "Pricing coverage",
+            "text": (
+                f"{comparable} of {total_apps} apps ({coverage:.1f}%) "
+                f"have a comparable positive monthly price."
+            )
+        })
+
+    return insights

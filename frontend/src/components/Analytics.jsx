@@ -24,6 +24,7 @@ function Analytics() {
   const [scatterData, setScatterData] = useState([]);
   const [topApps, setTopApps] = useState([]);
   const [topMetric, setTopMetric] = useState("engagement");
+  const [insights, setInsights] = useState([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -36,6 +37,7 @@ function Analytics() {
           correlationResponse,
           scatterResponse,
           topAppsResponse,
+          insightsResponse,
         ] = await Promise.all([
           fetch(`${API}/analytics/overview`),
           fetch(`${API}/analytics/categories`),
@@ -43,6 +45,7 @@ function Analytics() {
           fetch(`${API}/analytics/correlations`),
           fetch(`${API}/analytics/scatter`),
           fetch(`${API}/apps/rankings?metric=engagement&limit=10`),
+          fetch(`${API}/analytics/insights`),
         ]);
 
         if (
@@ -51,7 +54,8 @@ function Analytics() {
           !pricingResponse.ok ||
           !correlationResponse.ok ||
           !scatterResponse.ok ||
-          !topAppsResponse.ok
+          !topAppsResponse.ok ||
+          !insightsResponse.ok
         ) {
           throw new Error("Failed to load analytics");
         }
@@ -62,6 +66,7 @@ function Analytics() {
         const correlationData = await correlationResponse.json();
         const scatterDataResponse = await scatterResponse.json();
         const topAppsData = await topAppsResponse.json();
+        const insightsData = await insightsResponse.json();
 
         setOverview(overviewData);
         setCategories(categoryData);
@@ -69,6 +74,7 @@ function Analytics() {
         setCorrelations(correlationData);
         setScatterData(scatterDataResponse);
         setTopApps(topAppsData);
+        setInsights(insightsData);
       } catch (err) {
         console.error(err);
         setError("Unable to load analytics data.");
@@ -645,48 +651,22 @@ function Analytics() {
 
       </div>
 
-      {/* INSIGHTS */}
+      {/* DYNAMIC INSIGHTS */}
       <div className="analytics-panel insights-panel">
 
         <h2>Key Insights</h2>
 
         <div className="insight-list">
 
-          <div className="insight-item">
-            <strong>Engagement</strong>
-            <p>
-              Engagement combines rating and popularity, providing a broader
-              view than either metric alone.
-            </p>
-          </div>
+          {insights.map((insight, index) => (
+            <div className="insight-item" key={index}>
 
-          <div className="insight-item">
-            <strong>Pricing coverage</strong>
-            <p>
-              Only {overview.comparable_priced_apps} of{" "}
-              {overview.total_apps} analyzed apps have directly comparable
-              positive monthly prices.
-            </p>
-          </div>
+              <strong>{insight.title}</strong>
 
-          <div className="insight-item">
-            <strong>Rating vs popularity</strong>
-            <p>
-              The correlation is{" "}
-              {correlations.rating_vs_popularity}, showing a very weak
-              linear relationship in this dataset.
-            </p>
-          </div>
+              <p>{insight.text}</p>
 
-          <div className="insight-item">
-            <strong>Price vs engagement</strong>
-            <p>
-              The observed correlation is{" "}
-              {correlations.price_vs_engagement}, indicating little linear
-              relationship between monthly price and engagement in this
-              sample.
-            </p>
-          </div>
+            </div>
+          ))}
 
         </div>
 
