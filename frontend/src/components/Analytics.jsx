@@ -7,7 +7,7 @@ import {
   ScatterChart, Scatter,
 } from "recharts";
 
-const API = "http://127.0.0.1:8000";
+const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 /* Plausible-style colors */
 const C  = ["#6366f1","#8b5cf6","#06b6d4","#f59e0b","#10b981","#ec4899","#f97316","#64748b"];
