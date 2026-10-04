@@ -13,3 +13,8 @@ DATABASE_URL = (
     f"postgresql://{DB_USER}:{DB_PASSWORD}"
     f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 )
+
+
+if DB_HOST != "localhost":
+
+    DATABASE_URL += "?sslmode=require"
