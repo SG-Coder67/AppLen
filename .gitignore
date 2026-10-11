@@ -18,3 +18,28 @@ __pycache__/
 *.py[cod]
 
 .DS_Store
+# Additional virtual environments
+.venv-data/
+venv-data/
+
+# Local secrets
+.env.*
+!.env.example
+
+# Temporary backups
+*.bak
+*.backup
+
+# Generated datasets
+data/raw/
+data/processed/
+data/cleaned/
+
+# Keep directories visible in Git with placeholder files
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/cleaned/.gitkeep
+
+# Logs and temporary files
+*.log
+.DS_Store
